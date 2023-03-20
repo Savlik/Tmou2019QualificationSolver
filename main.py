@@ -29,7 +29,7 @@ async def fetch_words():
         lines = unidecode.unidecode(content).split("\n")
         words = {None: set()}
         for line in lines:
-            m = re.match(r"^(.*)/.*(H|Z|M|P|D|C).*$", line)
+            m = re.match(r"^(.*)/.*(H|Z|M|P|D|C|Q).*$", line)
             if m:
                 word = m.group(1).lower()
                 words[None].add(word)
